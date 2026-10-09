@@ -1,0 +1,12 @@
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais */
+  align-items: center;            /* Alinha os itens verticalmente ao centro */
+  height: 100vh;                  /* Opcional: faz o contêiner ocupar a altura da tela */
+}
+
+.container-grid img {
+  width: 1000px;                    /* Faz a imagem ocupar toda a largura da coluna esquerda */
+  height: 100%;                   /* Faz a imagem ocupar toda a altura da coluna */
+  object-fit: cover;              /* Mantém a proporção da imagem sem distorcer */
+}
