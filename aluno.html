@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acesso demonstrativo ao portal do aluno, sem autenticação.">
+  <title>Portal do aluno | Sergipe Cyber Nacional</title>
+  <link rel="stylesheet" href="paginas.css">
+  <link rel="stylesheet" href="servicos.css">
+  <script src="servicos.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Sergipe Cyber Nacional — página inicial">
+        <img src="images/logo_cyber_nacional.png" alt="Sergipe Cyber Nacional" width="220" height="121">
+      </a>
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="cyber-educacional.html">Cyber Educacional</a>
+        <a href="aluno.html" aria-current="page">Aluno</a>
+        <a href="professor.html">Professor</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="login-layout" aria-labelledby="page-title">
+      <div class="login-branding">
+        <a class="back-link" href="index.html">← Voltar ao início</a>
+        <p class="eyebrow">Sua jornada de aprendizado</p>
+        <h1 id="page-title">Portal do aluno</h1>
+        <p>Explore disciplinas, atividades e materiais em um ambiente de estudos.</p>
+        <img src="images/laboratorio-cyber.png" alt="Estudantes colaborando em um laboratório de tecnologia." width="1608" height="978">
+        <span class="demo-badge">Ambiente demonstrativo</span>
+      </div>
+      <div class="login-panel" id="login-panel">
+        <h2 id="login-heading">Entre para explorar</h2>
+        <p id="login-help">Use um nome fictício. O acesso é livre, sem senha e sem criação de conta.</p>
+        <form id="demo-login" data-role="aluno" aria-labelledby="login-heading">
+          <label for="demo-name">Nome de demonstração</label>
+          <input id="demo-name" type="text" placeholder="Ex.: Alex" maxlength="50" required autocomplete="off" aria-describedby="login-help">
+          <button class="button" id="login-button" type="submit" disabled>Entrar no portal <span aria-hidden="true">→</span></button>
+        </form>
+        <noscript><p>Ative o JavaScript do navegador para usar a demonstração do portal.</p></noscript>
+        <p class="form-note">O nome aparece somente nesta página e é apagado ao sair ou recarregar.</p>
+        <a class="text-link" href="professor.html">Ir para o portal do professor</a>
+      </div>
+    </section>
+    <section class="dashboard content-section" id="demo-dashboard" aria-labelledby="dashboard-title" hidden>
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">Portal do aluno · demonstração</p>
+          <h2 id="dashboard-title" tabindex="-1">Olá, <span id="display-name"></span>!</h2>
+          <p>Os dados abaixo são exemplos para explorar o portal.</p>
+        </div>
+        <button class="outline-button" id="logout-button" type="button">Sair da demonstração</button>
+      </div>
+      <div class="cards">
+        <article class="course-card">
+          <span class="card-number" aria-hidden="true">01</span>
+          <h3>Minhas disciplinas</h3>
+          <p>Conheça os temas do seu percurso de exemplo.</p>
+          <details><summary>Lógica de Programação</summary><p>Variáveis, condições, repetições e funções.</p><a class="text-link" href="cursos-livres.html">Explorar conteúdos de programação</a></details>
+          <details><summary>Desenvolvimento Web</summary><p>HTML semântico, CSS e layouts responsivos.</p><a class="text-link" href="blog.html">Consultar leituras de apoio</a></details>
+          <details><summary>Fundamentos de Redes</summary><p>Conexão entre dispositivos e organização de redes.</p><a class="text-link" href="tecnico.html">Explorar temas de redes</a></details>
+        </article>
+        <article class="course-card">
+          <span class="card-number" aria-hidden="true">02</span>
+          <h3>Atividades de estudo</h3>
+          <p>Marque as tarefas conforme explorar os temas.</p>
+          <div class="task-list">
+            <label><input type="checkbox" class="demo-task"> Revisar exercícios de lógica</label>
+            <label><input type="checkbox" class="demo-task"> Criar uma página com HTML e CSS</label>
+            <label><input type="checkbox" class="demo-task"> Desenhar uma rede simples</label>
+          </div>
+          <label class="progress-label" for="task-progress">Progresso da demonstração</label>
+          <progress id="task-progress" value="0" max="3">0 de 3</progress>
+          <p id="task-status" class="form-note" aria-live="polite">0 de 3 etapas concluídas.</p>
+        </article>
+        <article class="course-card">
+          <span class="card-number" aria-hidden="true">03</span>
+          <h3>Materiais de apoio</h3>
+          <p>Continue os estudos com conteúdos da instituição.</p>
+          <ul class="resource-list">
+            <li><a href="blog.html">Artigos sobre tecnologia e estudos</a></li>
+            <li><a href="cursos-livres.html">Cursos livres e projetos sugeridos</a></li>
+            <li><a href="congresso.html">Programação temática do congresso</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <nav class="explore-nav" aria-label="Serviços e informações">
+      <h2>Serviços e informações</h2>
+      <div class="area-links">
+        <a href="aluno.html" aria-current="page">Já sou aluno</a>
+        <a href="seja-um-polo.html">Seja um polo</a>
+        <a href="professor.html">Professor</a>
+        <a href="cyber-educacional.html">Cyber Educacional</a>
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="lgpd.html">LGPD</a>
+      </div>
+    </nav>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sergipe Cyber Nacional</strong><br>Conhecimento, tecnologia e futuro.</p>
+    <p>Projeto educacional de uma instituição fictícia.<br>Conteúdos e atividades demonstrativos.</p>
+    <a href="index.html">Página inicial ↑</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+:root {
+  color-scheme: light;
+  --navy: #07172e;
+  --blue: #005cff;
+  --cyan: #00c8ed;
+  --lime: #d6f800;
+  --paper: #f4f5fa;
+  --ink: #0c2446;
+  --muted: #465775;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+a { color: inherit; }
+a, summary { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.site-header a:focus-visible, .hero a:focus-visible, .site-footer a:focus-visible { outline-color: var(--lime); }
+.skip-link { position: absolute; top: 8px; left: 8px; transform: translateY(-160%); z-index: 10; background: var(--lime); padding: 12px 20px; font-weight: bold; }
+.skip-link:focus { transform: translateY(0); }
+.site-header { background: var(--navy); color: white; border-bottom: 1px solid #24405e; }
+.header-inner { max-width: 1320px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 12px 5%; }
+.brand { display: block; flex-shrink: 0; background: white; border-radius: 8px; padding: 2px 14px; }
+.brand img { display: block; width: 185px; height: auto; }
+.primary-nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.primary-nav a { text-decoration: none; font-size: 14px; font-weight: 700; padding: 8px 0; border-bottom: 2px solid transparent; }
+.primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--lime); border-bottom-color: var(--lime); }
+.hero { background: var(--navy); color: white; display: grid; grid-template-columns: 1fr 1fr; min-height: 540px; }
+.hero-copy { padding: 38px max(28px, 5vw) 56px; align-self: center; }
+.back-link { color: #b9d1ee; font-size: 13px; text-decoration: none; display: inline-block; margin-bottom: 30px; }
+.back-link:hover { color: var(--lime); }
+.eyebrow { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin: 0 0 14px; color: var(--blue); }
+.hero .eyebrow { color: var(--lime); }
+h1 { font-size: clamp(32px, 3.7vw, 58px); line-height: 1.08; letter-spacing: -.035em; margin: 0 0 24px; max-width: 680px; }
+.hero-description { color: #d3dfed; max-width: 540px; margin: 0 0 28px; font-size: 17px; }
+.button { background: var(--lime); color: var(--navy); display: inline-flex; align-items: center; gap: 28px; padding: 14px 24px; text-decoration: none; font-weight: 800; border-radius: 6px; }
+.button:hover { background: #e8ff56; }
+.hero-visual { margin: 0; position: relative; min-height: 400px; overflow: hidden; }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,23,46,.2), transparent 55%); pointer-events: none; }
+.hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; object-position: 65% center; position: absolute; inset: 0; }
+.hero-visual figcaption { position: absolute; bottom: 18px; right: 18px; left: 18px; width: fit-content; background: rgba(7,23,46,.88); color: white; padding: 8px 14px; font-size: 12px; border-left: 3px solid var(--cyan); z-index: 1; }
+.content-section, .explore-nav { max-width: 1320px; padding: 60px 5%; margin: auto; }
+.section-heading { max-width: 750px; margin-bottom: 30px; }
+h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.2; letter-spacing: -.025em; margin: 0 0 16px; }
+.section-heading > p:last-child { color: var(--muted); margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.course-card { background: white; border: 1px solid #dce2ec; border-top: 4px solid var(--cyan); padding: 28px; border-radius: 10px; box-shadow: 0 8px 24px #07172e07; }
+.card-number { display: inline-block; color: var(--blue); font-size: 13px; font-weight: 800; margin-bottom: 22px; border-bottom: 2px solid var(--lime); }
+h3 { margin: 0 0 12px; font-size: 23px; line-height: 1.25; }
+.course-card > p { color: var(--muted); margin: 0 0 22px; }
+details { border-top: 1px solid #e2e7ef; padding-top: 16px; }
+summary { color: var(--blue); font-weight: 700; cursor: pointer; padding: 6px 0; }
+summary:hover { color: var(--ink); }
+details[open] summary { margin-bottom: 14px; }
+h4 { margin: 20px 0 8px; font-size: 15px; }
+details ul { padding-left: 20px; color: var(--muted); }
+details p { color: var(--muted); margin: 0; }
+.explore-nav { border-top: 1px solid #d4dde9; padding-top: 40px; }
+.explore-nav h2 { font-size: 23px; }
+.area-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.area-links a { padding: 8px 14px; background: white; border: 1px solid #d3dce9; border-radius: 6px; text-decoration: none; font-size: 13px; }
+.area-links a:hover, .area-links a[aria-current="page"] { background: var(--navy); color: white; border-color: var(--navy); }
+.site-footer { background: var(--navy); color: #c9d5e5; padding: 32px 5%; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 12px; }
+.site-footer p { margin: 0; }
+.site-footer strong { color: white; font-size: 15px; }
+.site-footer a { color: var(--cyan); align-self: center; }
+@media (max-width: 1000px) {
+  .header-inner { gap: 20px; }
+  .primary-nav { gap: 14px; }
+  .cards { gap: 16px; }
+  .course-card { padding: 22px; }
+  .hero { min-height: 480px; }
+}
+@media (max-width: 760px) {
+  .header-inner { flex-direction: column; align-items: flex-start; padding: 16px 6%; gap: 14px; }
+  .brand img { width: 160px; }
+  .primary-nav { gap: 10px 20px; }
+  .primary-nav a { font-size: 13px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-copy { padding: 28px 6% 38px; }
+  .back-link { margin-bottom: 24px; }
+  h1 { max-width: 600px; font-size: clamp(32px, 7.6vw, 48px); }
+  .hero-description { font-size: 16px; }
+  .hero-visual { min-height: 290px; }
+  .hero-visual img { object-position: 65% 40%; }
+  .content-section, .explore-nav { padding: 38px 6%; }
+  .cards { grid-template-columns: 1fr; gap: 18px; }
+  .course-card { padding: 24px; }
+  .site-footer { flex-direction: column; padding: 28px 6%; gap: 18px; }
+  .site-footer a { align-self: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a proposta de parceria educacional e experimente um formulário demonstrativo.">
+  <title>Seja um polo | Sergipe Cyber Nacional</title>
+  <link rel="stylesheet" href="paginas.css">
+  <link rel="stylesheet" href="servicos.css">
+  <script src="servicos.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Sergipe Cyber Nacional — página inicial">
+        <img src="images/logo_cyber_nacional.png" alt="Sergipe Cyber Nacional" width="220" height="121">
+      </a>
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="cyber-educacional.html">Cyber Educacional</a>
+        <a href="aluno.html">Aluno</a>
+        <a href="professor.html">Professor</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="service-intro" aria-labelledby="page-title">
+      <div>
+        <a class="back-link" href="index.html">← Voltar ao início</a>
+        <p class="eyebrow">Parceria e educação</p>
+        <h1 id="page-title">Conecte sua região ao conhecimento.</h1>
+        <p>Conheça uma proposta de polo educacional da Sergipe Cyber Nacional e explore as etapas de uma parceria fictícia.</p>
+      </div>
+    </section>
+    <section class="content-section" aria-labelledby="partnership-title">
+      <div class="section-heading"><h2 id="partnership-title">Como seria a parceria</h2><p>Um percurso de planejamento para ampliar espaços de aprendizagem.</p></div>
+      <div class="cards">
+        <article class="course-card"><span class="card-number" aria-hidden="true">01</span><h3>Conheça a região</h3><p>Identifique interesses de estudo, acessibilidade e possibilidades de conexão com a comunidade.</p></article>
+        <article class="course-card"><span class="card-number" aria-hidden="true">02</span><h3>Planeje o espaço</h3><p>Explore uma proposta com áreas de atendimento, computadores e ambientes de colaboração.</p></article>
+        <article class="course-card"><span class="card-number" aria-hidden="true">03</span><h3>Organize o apoio</h3><p>Pense em como orientar estudantes e apoiar atividades de aprendizagem no polo.</p></article>
+      </div>
+      <div class="form-card">
+        <p class="eyebrow">Experimente o formulário</p>
+        <h2 id="polo-title">Simule uma proposta</h2>
+        <p id="polo-help">Preencha com informações fictícias. A simulação aparece nesta página e não envia uma solicitação.</p>
+        <form id="polo-form" aria-labelledby="polo-title">
+          <label for="polo-name">Nome fictício do responsável</label>
+          <input id="polo-name" type="text" required maxlength="60" autocomplete="off" aria-describedby="polo-help" placeholder="Ex.: Alex Silva">
+          <div class="form-grid">
+            <div><label for="polo-city">Cidade de exemplo</label><input id="polo-city" type="text" required maxlength="60" autocomplete="off" placeholder="Ex.: Aracaju"></div>
+            <div><label for="polo-model">Proposta de espaço</label><select id="polo-model" required><option value="">Selecione uma opção</option><option>Espaço de estudos</option><option>Laboratório de tecnologia</option><option>Atendimento e orientação</option></select></div>
+          </div>
+          <button class="button" id="polo-button" type="submit" disabled>Simular proposta <span aria-hidden="true">→</span></button>
+        </form>
+        <noscript><p>Ative o JavaScript para experimentar o formulário.</p></noscript>
+        <p id="polo-result" class="local-result" role="status" hidden></p>
+      </div>
+    </section>
+    <nav class="explore-nav" aria-label="Serviços e informações">
+      <h2>Serviços e informações</h2>
+      <div class="area-links">
+        <a href="aluno.html">Já sou aluno</a>
+        <a href="seja-um-polo.html" aria-current="page">Seja um polo</a>
+        <a href="professor.html">Professor</a>
+        <a href="cyber-educacional.html">Cyber Educacional</a>
+        <a href="privacidade.html">Política de privacidade</a>
+        <a href="lgpd.html">LGPD</a>
+      </div>
+    </nav>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sergipe Cyber Nacional</strong><br>Conhecimento, tecnologia e futuro.</p>
+    <p>Projeto educacional de uma instituição fictícia.<br>Conteúdos e atividades demonstrativos.</p>
+    <a href="index.html">Página inicial ↑</a>
+  </footer>
+</body>
+</html>

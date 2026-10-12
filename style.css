@@ -1,24 +1,167 @@
-.container-grid {
+/* * {
+  border: 1px dashed rgb(243, 29, 29)
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0A0E1A;
+  font: 12px Arial, sans-serif;
+}
+
+/* Divisão da imagem e sidebar */
+.Sidebar {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Sidebar .Logo_Principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.conteudo {
+  background-color: #F4F5FA;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.conteudo a {
+  text-decoration: none;
+}
+
+/* Logo do menu e estrutura de lista de curso */
+.logo_lista {
+  display: flex;               /* Alinha de forma inteligente */
+  justify-content: flex-start; /* Força a logo a colar totalmente à esquerda */
+  margin-bottom: 20px;         /* Respiro exato entre a logo e a lista de cursos */
+  padding: 0;
+  width: 100%;
+}
+
+.logo_lista .Logo_Secundaria {
+  width: 100%;
+  max-width: 220px;
+  height: auto !important;     /* Garante altura proporcional sem espaços fantasmas */
+  padding: 0 !important;       /* Remove o padding interno que desalinhava a imagem */
+  display: block;
+  margin: 0 !important;
+}
+
+.Lista_Tipos_Cursos,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.Lista_Tipos_Cursos li {
+  border-bottom: 1px solid #D0D0D0;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+/* Pseudo-classe: Aponta especificamente para o ÚLTIMO item (li) da lista */
+.Lista_Tipos_Cursos li:last-child {
+  border-bottom: none;
+}
+
+.Lista_Tipos_Cursos a {
+  display: block;
+}
+
+/* Estilização unificada dos textos dos cursos */
+.Lista_Tipos_Cursos p {
+  color: #003366;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Lista_Tipos_Cursos span {
+  color: #CC2900;
+  font-size: 12px;
+  display: block;
+}
+
+/* ==========================================================================
+   RODAPÉ DO MENU (LINKS MENORES EM DUAS COLUNAS)
+   ========================================================================== */
+.footer_divisao {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Divide em 2 colunas iguais */
-  align-items: center;
-  /* Alinha os itens verticalmente ao centro */
-  height: 100vh;
-  /* Opcional: faz o contêiner ocupar a altura da tela */
+  margin-top: 15px;
+  gap: 5px;
+  text-align: left;
 }
 
-.container-grid img {
-  width: 1000px;
-  /* Faz a imagem ocupar toda a largura da coluna esquerda */
-  height: 100%;
-  /* Faz a imagem ocupar toda a altura da coluna */
-  object-fit: cover;
-  /* Mantém a proporção da imagem sem distorcer */
+/* Estilo das Barrinhas Amarelas */
+.footer_divisao a {
+  color: #003366;
+  font-size: 12px;
+  border-left: 3px solid #FFC107;
+  padding-left: 6px;
+  margin-bottom: 6px;
+  display: block;
 }
 
-.Lista_Tipos_Cursos {
-  list-style: none;  /*Remove os marcadores(Bolinhas) da lista*/
-  padding: 0;  /*Remove o espaçamento interno da lista*/
-  margin:0;
+/* Zera as margens dos <p> do rodapé */
+.footer_divisao p {
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES PARA MÓVEIS E TABLETS)
+   ========================================================================== */
+
+/* Sempre que o ecrã do dispositivo tiver 900px de largura ou menos, aplica isto: */
+@media (max-width: 900px) {
+
+  /* 1. Transforma o Grid de duas colunas numa única coluna empilhada */
+  .Sidebar {
+    display: grid;
+    grid-template-columns: 1fr; /* Apenas uma coluna que ocupa 100% da largura */
+    height: auto;               /* Liberta a altura para o site poder crescer e criar scroll */
+    overflow: visible;          /* Permite a rolagem normal da página no telemóvel */
+  }
+
+  /* 2. Ajusta a imagem do banner para o topo */
+  .Sidebar .Logo_Principal {
+    width: 100%;
+    height: auto;               /* A altura adapta-se proporcionalmente no telemóvel */
+    max-height: 400px;          /* Impede que a imagem fique gigante num smartphone */
+    object-fit: cover;
+  }
+
+  /* 3. O menu passa a ocupar toda a largura abaixo da imagem */
+  .conteudo {
+    width: 100%;
+    height: auto;               /* Altura livre para todos os links aparecerem */
+    overflow-y: visible;        /* Remove a barra de rolagem interna, pois agora o site inteiro rola */
+    padding: 20px 15px;         /* Ajusta o respiro para telas menores */
+  }
+
+  /* 4. O rodapé adapta-se melhor a telas estreitas */
+  .footer_divisao {
+    grid-template-columns: 1fr; /* Se preferires, podes empilhar as colunas do rodapé também */
+    gap: 8px;
+  }
 }
